@@ -6,12 +6,13 @@ window.onload = () => {
   const $ = id => document.getElementById(id);
 
 
-if(!JSON.parse(localStorage.getItem("favorites"))){
-  const favorites = [];
-  localStorage.setItem("favorites", JSON.stringify(favorites))
-
-}
-
+  if (!JSON.parse(localStorage.getItem('favorites')) || JSON.parse(localStorage.getItem('favorites')).length === 0) {
+    let favorite = [];
+    localStorage.setItem('favorites', JSON.stringify(favorite));
+    $('favoritas').style.display = 'none';
+  } else {
+    $('favoritas').style.display = 'inline';
+  } 
 
   // Aqui debemos agregar nuestro fetch
 const apiCall = async () => {

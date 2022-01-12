@@ -16,7 +16,7 @@ const favorites = JSON.parse(localStorage.getItem('favorites'))
 
 let data = peliculas.data.filter(movie =>favorites.includes(movie.id));
 
-  console.log(data);
+  
    
     // Codigo que debemos usar para mostrar los datos en el frontend
     
