@@ -4,6 +4,7 @@ window.onload = () => {
     let query = new URLSearchParams(location.search);
     let id = query.get('id');
     
+   
     fetch('http://localhost:3031/api/movies/' + id).then(respuesta => {
         return respuesta.json()
     }).then(pelicula => {
@@ -33,7 +34,7 @@ window.onload = () => {
         $('release_date').value = dayjs(data.release_date).format('YYYY-MM-DD');
         $('length').value = data.length;
 
-    }).catch(error => console.log(error))
+    }).catch(error => console.log(error)) */
 
     $('botonAgregar').addEventListener('click', () => {
         let createData = {
@@ -102,5 +103,5 @@ window.onload = () => {
             }).catch(error => console.log(error))
         }
 
-    })*/
+    })
 }

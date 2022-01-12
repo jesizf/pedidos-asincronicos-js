@@ -39,8 +39,9 @@ const apiCall = async () => {
 
       const duracion = document.createElement("p");
       duracion.textContent = `Duración: ${movie.length}`;
-      const verMas = document.createElement("a");
-      verMas.textContent = "VER MÁS"
+      const verMas = document.createElement('a');
+      verMas.setAttribute('class', 'botonAgregar')
+      verMas.innerHTML = '<i class="far fa-eye"></i>'
       verMas.href = "formulario.html?id="+ movie.id;
 
       const action = document.createElement('div');
